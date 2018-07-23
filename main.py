@@ -1,6 +1,4 @@
-
 import random as r
-
 import pygame
 
 class Circle(object):
@@ -16,15 +14,18 @@ class Circle(object):
     def grow(self):
         self.rad+=self.vel
 
+
+x=360 #Screen width
+y=640 #Screen Height
+
 pygame.font.init()
 pygame.init()
-x=360
-y=640
 wnd = pygame.display.set_mode((x,y))
 pygame.display.set_caption("Aim Training")
 
 run = True
 rep=True
+
 def game_menu():  
     run = True
     fnt = pygame.font.get_default_font()
@@ -65,6 +66,7 @@ def game_loop():
     drag=False
     pts=0
     clock=pygame.time.Clock()
+    
     while run:
         dt = clock.tick()
         if pts>10:
